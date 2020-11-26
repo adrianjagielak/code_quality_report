@@ -1,0 +1,15 @@
+stages:
+  - test
+
+dartanalyzer:
+  image: google/dart:dev
+  stage: test
+  before_script:
+    - pub global activate code_quality_report
+    - export PATH="$PATH":"$HOME/.pub-cache/bin"
+  script:
+    - pub get
+    - dartanalyzer . --format=machine 2>&1 | tocodeclimate > code-quality-report.json
+  artifacts:
+    reports:
+      codequality: code-quality-report.json
