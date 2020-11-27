@@ -10,6 +10,7 @@ Future main() async {
 
   stdout.write('[');
 
+  int exitCode = 0;
   int lineCount = 0;
 
   await for (String line in lines) {
@@ -17,10 +18,17 @@ Future main() async {
       stdout.write(',');
     }
 
-    stdout.write(Issue.fromAnalyzer(line));
+    try {
+      stdout.write(Issue.fromAnalyzer(line));
+    } catch (_) {
+      stderr.writeln(line);
+      exitCode = 1;
+    }
 
     lineCount++;
   }
 
   stdout.write(']');
+
+  exit(exitCode);
 }
