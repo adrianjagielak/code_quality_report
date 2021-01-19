@@ -1,6 +1,8 @@
 Code Quality Report
 ============
 
+[![Pub](https://img.shields.io/pub/v/code_quality_report.svg)](https://pub.dev/packages/code_quality_report)
+
 * [Introduction](#introduction)
 * [Installation](#installation)
 * [License and contributors](#license-and-contributors)
