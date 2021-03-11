@@ -1,4 +1,4 @@
-Example .gitlab-ci.yml file used internally by this program:
+Example .gitlab-ci.yml file used internally by this tool:
 
 ```YAML
 stages:

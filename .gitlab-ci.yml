@@ -2,7 +2,7 @@ stages:
   - test
 
 dartanalyzer:
-  image: google/dart:dev
+  image: google/dart
   stage: test
   before_script:
     - pub global activate code_quality_report
