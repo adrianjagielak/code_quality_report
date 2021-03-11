@@ -1,7 +1,7 @@
 name: code_quality_report
 description: Generate Code Climate JSON reports from dart Analysis Server. Transforms the output of dartanalyzer to GitLab code quality JSON
 
-version: 0.1.2
+version: 1.0.0
 homepage: https://github.com/adrianjagielak/code_quality_report
 
 environment:
